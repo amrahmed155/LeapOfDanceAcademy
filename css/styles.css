@@ -10868,7 +10868,7 @@ p {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 1rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -11565,6 +11565,30 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 /* donations end */
 
+/* fonts */
+.masthead-subheading,.section-subheading {
+  font-family:  'Savoye LET Plain' !important;
+  font-size: xx-large !important;
+}
 
+
+.masthead-heading,.section-heading {
+  font-family:  'Avenir Roman' !important;
+  font-size: xx-large !important;
+}
+
+.timeline-heading {
+  font-family:  'Avenir Roman' !important;
+  font-size: large !important;
+}
+.subheading {
+  font-family:  'Savoye LET Plain' !important;
+  font-size: xx-large !important;
+}
+.timeline-body{
+  font-family:  'Savoye LET Plain' !important;
+  font-size:medium !important;
+}
+/* fonts end */
 
 
