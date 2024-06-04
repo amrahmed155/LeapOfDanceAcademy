@@ -771,6 +771,19 @@
               <div class="row align-items-stretch mb-5">
                   <div class="col-md-6">
                       <div class="form-group">
+                          <!-- Prefix input-->
+                          <select class="form-control" id="prefix" name="prefix" required>
+                              <option value="">Select Prefix *</option>
+                              <option value="Mr.">Mr.</option>
+                              <option value="Mrs.">Mrs.</option>
+                              <option value="Ms.">Ms.</option>
+                              <option value="Dr.">Dr.</option>
+                          </select>
+                          <div class="invalid-feedback">
+                              A prefix is required.
+                          </div>
+                      </div>
+                      <div class="form-group">
                           <!-- Name input-->
                           <input
                               class="form-control"
@@ -840,9 +853,7 @@
               </div>
               <!-- Submit error message-->
               <div class="d-none" id="submitErrorMessage">
-                  <div class="text-center text-danger mb-3">
-                      Error sending message!
-                  </div>
+                  <div class="text-center text-danger mb-3">Error sending message!</div>
               </div>
               <!-- Submit Button-->
               <div class="text-center">
@@ -857,6 +868,7 @@
           </form>
       </div>
   </section>
+  
 
     <!-- Footer-->
     <footer class="footer py-4">
@@ -1150,17 +1162,17 @@
       });
     </script>
 
-    
 <script type="text/javascript">
   document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
+      var prefix = document.getElementById('prefix').value;
       var name = document.getElementById('name').value;
       var email = document.getElementById('email').value;
       var phone = document.getElementById('phone').value;
       var message = document.getElementById('message').value;
 
-      var mailtoLink = `mailto:amrasayed15@gmail.com?subject=Contact Form Submission&body=Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      var mailtoLink = `mailto:amrasayed15@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
 
       window.location.href = mailtoLink;
 
@@ -1168,5 +1180,6 @@
       document.getElementById('submitSuccessMessage').classList.remove('d-none');
   });
 </script>
+
   </body>
 </html>
