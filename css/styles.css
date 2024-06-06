@@ -10984,6 +10984,8 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  background-color: #95651a78 !important;
+  background-blend-mode: multiply;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11592,3 +11594,5 @@ section#contact form#contactForm :-ms-input-placeholder {
 /* fonts end */
 
 
+
+.subPagesNavbar{background-color: #212529!important;margin-bottom: 3.5rem;}
