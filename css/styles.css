@@ -11618,3 +11618,31 @@ section#contact form#contactForm :-ms-input-placeholder {
   border-color: var(--primary-green);
 }
 /* MODAL END */
+.iti ,.iti--allow-dropdown{
+  width: 100%!important;
+}
+#phone{
+  padding-left: 3rem!important;
+}
+
+
+.portfolio-modal1{    background: url('../assets/img/portfolio/img1.jpg') no-repeat center center;
+  background-size:contain;}
+  
+.portfolio-modal2{    background: url('../assets/img/portfolio/img2.jpg') no-repeat center center;
+  background-size:contain;}
+  
+.portfolio-modal3{    background: url('../assets/img/portfolio/img3.jpg') no-repeat center center;
+  background-size:contain;}
+  
+.portfolio-modal4{    background: url('../assets/img/portfolio/img4.jpg') no-repeat center center;
+  background-size:contain;}
+  
+.portfolio-modal5{    background: url('../assets/img/portfolio/img5.jpg') no-repeat center center;
+  background-size:contain;}
+  
+.portfolio-modal6{    background: url('../assets/img/portfolio/img6.jpg') no-repeat center center;
+  background-size:contain;background-color: #fff0;}
+
+  .modal-transparent{  background-color: #fff0; height: auto;width: auto;;
+  }

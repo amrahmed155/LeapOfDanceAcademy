@@ -19,6 +19,7 @@
     ></script> -->
     <!-- Google fonts-->
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/intlTelInput.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
@@ -126,6 +127,7 @@
             </p>
 
             <a
+              href="#"
               class="btn btn-primary donation-btn mt-auto"
               data-toggle="modal"
               data-target="#donationModal"
@@ -844,7 +846,6 @@
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="Your Phone *"
                   required
                 />
                 <div class="invalid-feedback">A phone number is required.</div>
@@ -926,7 +927,67 @@
         </div>
       </div>
     </footer>
-
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal1"></div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal2"></div>
+    </div>
+    <!-- Portfolio item 3 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal3"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal3"></div>
+    </div>
+    <!-- Portfolio item 4 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal4"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal4"></div>
+    </div>
+    <!-- Portfolio item 5 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal5"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal5"></div>
+    </div>
+    <!-- Portfolio item 6 modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal6"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog portfolio-modal6"></div>
+    </div>
     <!-- donation bank account modal popup -->
     <!-- Donation Modal -->
     <div
@@ -988,6 +1049,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
@@ -1013,7 +1075,9 @@
           var prefix = document.getElementById("prefix").value;
           var name = document.getElementById("name").value;
           var email = document.getElementById("email").value;
-          var phone = document.getElementById("phone").value;
+          var phone =
+            phoneInput.getSelectedCountryData().dialCode +
+            document.getElementById("phone").value;
           var message = document.getElementById("message").value;
 
           var mailtoLink = `mailto:leapofdanceacademy@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
@@ -1025,6 +1089,12 @@
             .getElementById("submitSuccessMessage")
             .classList.remove("d-none");
         });
+    </script>
+    <script>
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "js/utils.js",
+      });
     </script>
   </body>
 </html>
