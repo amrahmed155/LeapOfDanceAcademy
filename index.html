@@ -19,12 +19,13 @@
     ></script> -->
     <!-- Google fonts-->
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body id="page-top">
     <div id="whatsapp-button">
       <a
-        href="https://wa.me/+234 701 142 7873?text=Hello%20there!"
+        href="https://wa.me/+2347011427873?text=Hello%20there!"
         target="_blank"
       >
         <img src="assets/img/WhatsApp_icon.png" alt="WhatsApp" />
@@ -68,9 +69,11 @@
               <a class="nav-link" href="teamGallery.html">Meet Our Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="studentGallery.html">Meet Our Students</a>
+              <a class="nav-link" href="studentGallery.html"
+                >Meet Our Students</a
+              >
             </li>
-            
+
             <!-- <div id="paypal-donate-button-container"></div> -->
           </ul>
         </div>
@@ -86,73 +89,84 @@
         >
       </div>
     </header>
-      <!-- donate-->
-      <section class="page-section" id="donate">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">how to donate</h2>
-                <h2 class="section-heading text-uppercase">help & donate online</h2>
-                <h3 class="section-subheading text-muted"> “People say that you can never do ballet the way it is done abroad
-                  because ballet is not an African dance, but for me it's about making
-                  the art form our own,” says Oweseni who is moments away from
-                  teaching his next class as our Zoom call comes to an end.</h3>
-            </div>
-            <div class="container mt-5 mb-5">
-              <div class="row justify-content-center"> <a href="https://gofund.me/d1264c04" class="btn btn-primary donation-btn mt-auto custom-button"></a></div>
-             
-          </div>
-            <div class="row text-center">
-                <div class="col-md-4 mb-4" >
-                  
-                  <h4 class="donation-title my-3">Donate</h4>
-
-                    <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img11.jpg"
-                    alt="..."
-                  />
-                    
-                    <p class="text-muted"> You can donate now and help save lives, this will shape our
-                      children.</p>
-
-                      <a
-                      href="https://www.mchanga.africa/fundraiser/47707"
-                      class="btn btn-primary donation-btn mt-auto"
-                      >Donate Now</a
-                    >
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="donation-title my-3">Volunteer</h4>
-                    <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img10.jpg"
-                    alt="..."
-                  />
-                    <p class="text-muted">You can also volunteer and help in handling some tasks.</p>
-                    <a
-                    href="https://www.surveymonkey.com/r/CSXKZQV"
-                    class="btn btn-primary donation-btn mt-auto"
-                    >Volunteer now</a>
-                  </div>
-                <div class="col-md-4">
-                    
-                    <h4 class="donation-title my-3">Scholarship</h4>
-                    <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img9.jpg"
-                    alt="..."
-                  /> 
-                    <p class="text-muted">We would also appreciate if you gave our kids scholarship.</p>
-                    <a
-                    href="https://fountainofgracerescue.org/sponsorshipform.html"
-                    class="btn btn-primary donation-btn mt-auto"
-                    >Sponsor us</a
-                  >
-                  </div>
-            </div>
+    <!-- donate-->
+    <section class="page-section" id="donate">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">how to donate</h2>
+          <h2 class="section-heading text-uppercase">help & donate online</h2>
+          <h3 class="section-subheading text-muted">
+            “People say that you can never do ballet the way it is done abroad
+            because ballet is not an African dance, but for me it's about making
+            the art form our own,” says Oweseni who is moments away from
+            teaching his next class as our Zoom call comes to an end.
+          </h3>
         </div>
-    </section>
+        <div class="container mt-5 mb-5">
+          <div class="row justify-content-center">
+            <a
+              href="https://gofund.me/d1264c04"
+              class="btn btn-primary donation-btn mt-auto custom-button"
+            ></a>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <h4 class="donation-title my-3">Donate</h4>
 
+            <img
+              class="img-fluid d-block mx-auto"
+              src="assets/img/portfolio/img11.jpg"
+              alt="..."
+            />
+
+            <p class="text-muted">
+              You can donate now and help save lives, this will shape our
+              children.
+            </p>
+
+            <a
+              class="btn btn-primary donation-btn mt-auto"
+              data-toggle="modal"
+              data-target="#donationModal"
+              >Donate Now</a
+            ><!-- href="https://www.mchanga.africa/fundraiser/47707" -->
+          </div>
+          <div class="col-md-4 mb-4">
+            <h4 class="donation-title my-3">Volunteer</h4>
+            <img
+              class="img-fluid d-block mx-auto"
+              src="assets/img/portfolio/img10.jpg"
+              alt="..."
+            />
+            <p class="text-muted">
+              You can also volunteer and help in handling some tasks.
+            </p>
+            <a
+              href="https://www.surveymonkey.com/r/CSXKZQV"
+              class="btn btn-primary donation-btn mt-auto"
+              >Volunteer now</a
+            >
+          </div>
+          <div class="col-md-4">
+            <h4 class="donation-title my-3">Scholarship</h4>
+            <img
+              class="img-fluid d-block mx-auto"
+              src="assets/img/portfolio/img9.jpg"
+              alt="..."
+            />
+            <p class="text-muted">
+              We would also appreciate if you gave our kids scholarship.
+            </p>
+            <a
+              href="https://fountainofgracerescue.org/sponsorshipform.html"
+              class="btn btn-primary donation-btn mt-auto"
+              >Sponsor us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Portfolio Grid-->
     <section class="page-section bg-light" id="portfolio">
@@ -293,9 +307,7 @@
               </a>
               <div class="portfolio-caption">
                 <div class="portfolio-caption-heading">Spin</div>
-                <div class="portfolio-caption-subheading text-muted">
-                    Whirl
-                </div>
+                <div class="portfolio-caption-subheading text-muted">Whirl</div>
               </div>
             </div>
           </div>
@@ -321,7 +333,7 @@
               <div class="portfolio-caption">
                 <div class="portfolio-caption-heading">Leap</div>
                 <div class="portfolio-caption-subheading text-muted">
-                    Flight
+                  Flight
                 </div>
               </div>
             </div>
@@ -354,10 +366,14 @@
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
-                Daniel Ajala started dancing while in University where his passion for dance grew as he started to research and self train.
-                After graduating university Ajala stayed in his home town to pursue teaching the local kids in his area regardless of cultural expectations to pursue a traditional career.
-                “Dance is the thing that gives me the greatest joy, and it is my greatest pursuit in life,
-                ballet is the core of my whole entire being”
+                  Daniel Ajala started dancing while in University where his
+                  passion for dance grew as he started to research and self
+                  train. After graduating university Ajala stayed in his home
+                  town to pursue teaching the local kids in his area regardless
+                  of cultural expectations to pursue a traditional career.
+                  “Dance is the thing that gives me the greatest joy, and it is
+                  my greatest pursuit in life, ballet is the core of my whole
+                  entire being”
                 </p>
               </div>
             </div>
@@ -372,16 +388,18 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>9 September 2017 </h4>
+                <h4>9 September 2017</h4>
                 <h4 class="subheading">An Academy is Born</h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
-                Daniel opened the Leap Of Dance Academy, 
-                with the goal of training students in the art of ballet at a professional level.
-                Students at the Academy train with integrity and dedication to the arts,
-                and they have an incredible drive to work to be the best version of themselves.
-                Our students have an incredible passion for dancing and they do not let any circumstances set them back from their education.
+                  Daniel opened the Leap Of Dance Academy, with the goal of
+                  training students in the art of ballet at a professional
+                  level. Students at the Academy train with integrity and
+                  dedication to the arts, and they have an incredible drive to
+                  work to be the best version of themselves. Our students have
+                  an incredible passion for dancing and they do not let any
+                  circumstances set them back from their education.
                 </p>
               </div>
             </div>
@@ -401,10 +419,12 @@
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
-                We are also involved in many online scholarships and guest teacher training via virtual
-                media platforms which is actually a blessing and resource that is beneficial to us because of the outcome of covid.
-                Our academy is set as a non-profit academy.
-                Our students have had the opportunity to train in the United Kingdom and some parts of Europe.
+                  We are also involved in many online scholarships and guest
+                  teacher training via virtual media platforms which is actually
+                  a blessing and resource that is beneficial to us because of
+                  the outcome of covid. Our academy is set as a non-profit
+                  academy. Our students have had the opportunity to train in the
+                  United Kingdom and some parts of Europe.
                 </p>
               </div>
             </div>
@@ -424,13 +444,16 @@
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
-                We are in the process of  building a website and place for people to donate
-                so that we can build a proper and safe dance school with better resources.
-                2024,through the kindness of an individual we have covered our rehearsal space with a roof
-                to prevent the sun as we used to practice in the open air since
-                We are also seeking out international training opportunities for both our students and our staff.
-                Our difficulties are mostly the above, resources for training here in Nigeria (a proper studio & equipment)
-                and also opportunities to get professional training or certifications for our teachers.
+                  We are in the process of building a website and place for
+                  people to donate so that we can build a proper and safe dance
+                  school with better resources. 2024,through the kindness of an
+                  individual we have covered our rehearsal space with a roof to
+                  prevent the sun as we used to practice in the open air since
+                  We are also seeking out international training opportunities
+                  for both our students and our staff. Our difficulties are
+                  mostly the above, resources for training here in Nigeria (a
+                  proper studio & equipment) and also opportunities to get
+                  professional training or certifications for our teachers.
                 </p>
               </div>
             </div>
@@ -730,7 +753,6 @@
               corporis ea, alias ut unde. -->
               See more...
             </p>
-
           </div>
         </div>
       </div>
@@ -770,114 +792,103 @@
     <!-- Contact-->
     <section class="page-section" id="contact">
       <div class="container">
-          <div class="text-center">
-              <h2 class="section-heading text-uppercase">Contact Us</h2>
-              <h3 class="section-subheading text-muted">
-                  <!-- Lorem ipsum dolor sit amet consectetur. -->
-              </h3>
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h3 class="section-subheading text-muted">
+            <!-- Lorem ipsum dolor sit amet consectetur. -->
+          </h3>
+        </div>
+        <form id="contactForm">
+          <div class="row align-items-stretch mb-5">
+            <div class="col-md-6">
+              <div class="form-group">
+                <!-- Prefix input-->
+                <select class="form-control" id="prefix" name="prefix" required>
+                  <option value="">Select Prefix *</option>
+                  <option value="Mr.">Mr.</option>
+                  <option value="Mrs.">Mrs.</option>
+                  <option value="Ms.">Ms.</option>
+                  <option value="Dr.">Dr.</option>
+                </select>
+                <div class="invalid-feedback">A prefix is required.</div>
+              </div>
+              <div class="form-group">
+                <!-- Name input-->
+                <input
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your Name *"
+                  required
+                />
+                <div class="invalid-feedback">A name is required.</div>
+              </div>
+              <div class="form-group">
+                <!-- Email address input-->
+                <input
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Your Email *"
+                  required
+                />
+                <div class="invalid-feedback">An email is required.</div>
+                <div class="invalid-feedback">Email is not valid.</div>
+              </div>
+              <div class="form-group mb-md-0">
+                <!-- Phone number input-->
+                <input
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Your Phone *"
+                  required
+                />
+                <div class="invalid-feedback">A phone number is required.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group form-group-textarea mb-md-0">
+                <!-- Message input-->
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  placeholder="Your Message *"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">A message is required.</div>
+              </div>
+            </div>
           </div>
-          <form id="contactForm">
-              <div class="row align-items-stretch mb-5">
-                  <div class="col-md-6">
-                      <div class="form-group">
-                          <!-- Prefix input-->
-                          <select class="form-control" id="prefix" name="prefix" required>
-                              <option value="">Select Prefix *</option>
-                              <option value="Mr.">Mr.</option>
-                              <option value="Mrs.">Mrs.</option>
-                              <option value="Ms.">Ms.</option>
-                              <option value="Dr.">Dr.</option>
-                          </select>
-                          <div class="invalid-feedback">
-                              A prefix is required.
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <!-- Name input-->
-                          <input
-                              class="form-control"
-                              id="name"
-                              name="name"
-                              type="text"
-                              placeholder="Your Name *"
-                              required
-                          />
-                          <div class="invalid-feedback">
-                              A name is required.
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <!-- Email address input-->
-                          <input
-                              class="form-control"
-                              id="email"
-                              name="email"
-                              type="email"
-                              placeholder="Your Email *"
-                              required
-                          />
-                          <div class="invalid-feedback">
-                              An email is required.
-                          </div>
-                          <div class="invalid-feedback">
-                              Email is not valid.
-                          </div>
-                      </div>
-                      <div class="form-group mb-md-0">
-                          <!-- Phone number input-->
-                          <input
-                              class="form-control"
-                              id="phone"
-                              name="phone"
-                              type="tel"
-                              placeholder="Your Phone *"
-                              required
-                          />
-                          <div class="invalid-feedback">
-                              A phone number is required.
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="form-group form-group-textarea mb-md-0">
-                          <!-- Message input-->
-                          <textarea
-                              class="form-control"
-                              id="message"
-                              name="message"
-                              placeholder="Your Message *"
-                              required
-                          ></textarea>
-                          <div class="invalid-feedback">
-                              A message is required.
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- Submit success message-->
-              <div class="d-none" id="submitSuccessMessage">
-                  <div class="text-center text-white mb-3">
-                      <div class="fw-bolder">Form submission successful!</div>
-                  </div>
-              </div>
-              <!-- Submit error message-->
-              <div class="d-none" id="submitErrorMessage">
-                  <div class="text-center text-danger mb-3">Error sending message!</div>
-              </div>
-              <!-- Submit Button-->
-              <div class="text-center">
-                  <button
-                      class="btn btn-primary btn-xl text-uppercase"
-                      id="submitButton"
-                      type="submit"
-                  >
-                      Send Message
-                  </button>
-              </div>
-          </form>
+          <!-- Submit success message-->
+          <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center text-white mb-3">
+              <div class="fw-bolder">Form submission successful!</div>
+            </div>
+          </div>
+          <!-- Submit error message-->
+          <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">
+              Error sending message!
+            </div>
+          </div>
+          <!-- Submit Button-->
+          <div class="text-center">
+            <button
+              class="btn btn-primary btn-xl text-uppercase"
+              id="submitButton"
+              type="submit"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
       </div>
-  </section>
-  
+    </section>
 
     <!-- Footer-->
     <footer class="footer py-4">
@@ -915,245 +926,67 @@
         </div>
       </div>
     </footer>
-    <!-- Portfolio Modals-->
-    <!-- Portfolio item 1 modal popup-->
+
+    <!-- donation bank account modal popup -->
+    <!-- Donation Modal -->
     <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal1"
+      class="modal fade donate-modal"
+      id="donationModal"
       tabindex="-1"
       role="dialog"
+      aria-labelledby="donationModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
+          <div class="modal-header">
+            <h5 class="modal-title" id="donationModalLabel">
+              Bank Account Information
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img1.jpg"
-                    alt="..."
-                  />
-
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
+          <div class="modal-body">
+            <p>
+              Thank you for your generosity. Please use the following bank
+              account information to make your donation:
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Bank Name:</strong> Wemabank</li>
+              <li>
+                <strong>Account Name:</strong> Leap of Dance Academy Foundation
+              </li>
+              <li><strong>Account Number:</strong> 0620283607</li>
+              <!-- <li><strong>Routing Number:</strong> 987654321</li>
+                      <li><strong>SWIFT Code:</strong> EXAMPUS3XXX</li> -->
+            </ul>
+            <p>
+              If you have any questions, please contact us at
+              leapofdanceacademy@gmail.com.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- Portfolio item 2 modal popup-->
-    <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal2"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img2.jpg"
-                    alt="..."
-                  />
-
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Portfolio item 3 modal popup-->
-    <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal3"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img3.jpg"
-                    alt="..."
-                  />
-
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Portfolio item 4 modal popup-->
-    <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal4"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                 
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img4.jpg"
-                    alt="..."
-                  />
-
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Portfolio item 5 modal popup-->
-    <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal5"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img5.jpg"
-                    alt="..."
-                  />
-
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Portfolio item 6 modal popup-->
-    <div
-      class="portfolio-modal modal fade"
-      id="portfolioModal6"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-bs-dismiss="modal">
-            <img src="assets/img/close-icon.svg" alt="Close modal" />
-          </div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <div class="modal-body">
-                  <!-- Project details-->
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/img6.jpg"
-                    alt="..."
-                  />
-                  <!-- <button
-                    class="btn btn-primary btn-xl text-uppercase"
-                    data-bs-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fas fa-xmark me-1"></i>
-                    Close Project
-                  </button> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Bootstrap core JS-->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
@@ -1171,24 +1004,27 @@
       });
     </script>
 
-<script type="text/javascript">
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+    <script type="text/javascript">
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-      var prefix = document.getElementById('prefix').value;
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-      var phone = document.getElementById('phone').value;
-      var message = document.getElementById('message').value;
+          var prefix = document.getElementById("prefix").value;
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+          var message = document.getElementById("message").value;
 
-      var mailtoLink = `mailto:leapofdanceacademy@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+          var mailtoLink = `mailto:leapofdanceacademy@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
 
-      window.location.href = mailtoLink;
+          window.location.href = mailtoLink;
 
-      // Display success message
-      document.getElementById('submitSuccessMessage').classList.remove('d-none');
-  });
-</script>
-
+          // Display success message
+          document
+            .getElementById("submitSuccessMessage")
+            .classList.remove("d-none");
+        });
+    </script>
   </body>
 </html>

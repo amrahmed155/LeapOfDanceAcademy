@@ -97,6 +97,8 @@
   --bs-link-hover-color: #cca000;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
+  --primary-brown: #8B4513;
+  --primary-green: #3CB371;
 }
 
 *,
@@ -5262,7 +5264,7 @@ textarea.form-control-lg {
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
-  /* --bs-modal-bg: #fff; */
+  --bs-modal-bg: #fff;
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: 1px;
   --bs-modal-border-radius: 0.5rem;
@@ -11598,3 +11600,21 @@ section#contact form#contactForm :-ms-input-placeholder {
 .subPagesNavbar{background-color: #212529!important;margin-bottom: 3.5rem;}
 
 .SVGcolorW svg{color: white;}
+
+
+
+/* MODAL */
+
+.donate-modal .modal-header {
+  background-color: var(--primary-brown);
+  color: white;
+}
+.donate-modal .modal-footer .btn {
+  background-color: var(--primary-green);
+  color: white;
+}
+.donate-modal .btn-primary {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+/* MODAL END */
