@@ -13,6 +13,10 @@
 
 
  
+ .navbar-shrink .nav-item .nav-link{
+  color: #4e2b22!important;
+}
+ 
 
 @font-face {
   font-family: 'Savoye LET Plain';
@@ -2026,7 +2030,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #ED9BBD;
+  color: #4d2c25;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -2048,7 +2052,7 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #ED9BBD;
+  color: #4e2b22;
   background-color: #fff;
   border-color: #244749;
   outline: 0;
@@ -2996,8 +3000,8 @@ textarea.form-control-lg {
   --bs-btn-bg: #4e2b22;
   --bs-btn-border-color: #4e2b22;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #424649;
-  --bs-btn-hover-border-color: #373b3e;
+  --bs-btn-hover-bg: #3f241f;
+  --bs-btn-hover-border-color: #fff;
   --bs-btn-focus-shadow-rgb: 66, 70, 73;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: #4d5154;
@@ -10941,7 +10945,7 @@ p {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #9bc8cb;
+  color: #9bc8cb !important;
 }
 
 @media (min-width: 992px) {
@@ -11679,7 +11683,3 @@ section#contact form#contactForm :-ms-input-placeholder {
   }
   .navbar-shrink{color: #4e2b22; }
 
-
-  #mainNav .navbar-shrink .nav-item .nav-link{
-    color: #087990;
-  }
