@@ -77,11 +77,11 @@
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Savoye LET Plain,Avenir Roman, Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: Avenir Roman, Roboto Slab, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #ED9BBD;
+  --bs-body-color: #5E3327;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -2993,8 +2993,8 @@ textarea.form-control-lg {
 
 .btn-dark {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #ED9BBD;
-  --bs-btn-border-color: #ED9BBD;
+  --bs-btn-bg: #4e2b22;
+  --bs-btn-border-color: #4e2b22;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #424649;
   --bs-btn-hover-border-color: #373b3e;
@@ -3004,8 +3004,8 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: #373b3e;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #ED9BBD;
-  --bs-btn-disabled-border-color: #ED9BBD;
+  --bs-btn-disabled-bg: #4e2b22;
+  --bs-btn-disabled-border-color: #4e2b22;
 }
 
 .btn-outline-primary {
@@ -10913,7 +10913,7 @@ p {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #ED9BBD;
+  background-color: #FBE9E5;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10937,6 +10937,7 @@ p {
   font-family: "Avenir Roman","Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
   color: #fff;
+  /* color: #4e2b22; */
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -10964,7 +10965,9 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     /* background-color: #ED9BBD; SWAPPED WITH LIGHT PINK*/ 
-    background-color: #ED9BBD;
+    color: #4e2b22;
+
+    background-color: #FBE9E5;
     
   }
   #mainNav.navbar-shrink .navbar-brand {
@@ -11042,7 +11045,7 @@ header.masthead .masthead-heading {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(190, 86, 131, 0.9);
+  background: rgba(251, 233, 229, 0.71);
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -11301,7 +11304,7 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #ED9BBD;
+  background-color: #4e2b22;
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -11537,7 +11540,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .donation-title {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  font-family: 'Savoye LET Plain','Avenir Roman';
+  font-family: 'Avenir Roman';
   font-size: xx-large;
 }
 .donation-price {
@@ -11551,7 +11554,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 .donation-features li {
   margin-bottom: 10px;
-  font-family: 'Savoye LET Plain','Avenir Roman';
+  font-family: 'Avenir Roman';
   font-size: larger;
 
 }
@@ -11579,8 +11582,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 /* fonts */
 .masthead-subheading,.section-subheading {
-  font-family:  'Savoye LET Plain' !important;
-  font-size: xx-large !important;
+  font-family:   'Avenir Roman' !important;
+  /* font-size: xx-large !important; */
 }
 
 
@@ -11589,7 +11592,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: xx-large !important;
 }
 .SavoyePlainFont{
-  font-family:  'Savoye LET Plain'!important;
+  font-family:   'Avenir Roman'!important;
 
 }
 .avenirFont{
@@ -11600,11 +11603,11 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: large !important;
 }
 .subheading {
-  font-family:  'Savoye LET Plain' !important;
+  font-family:   'Avenir Roman' !important;
   font-size: xx-large !important;
 }
 .timeline-body{
-  font-family:  'Savoye LET Plain' !important;
+  font-family:   'Avenir Roman' !important;
   font-size:medium !important;
 }
 /* fonts end */
@@ -11670,4 +11673,13 @@ section#contact form#contactForm :-ms-input-placeholder {
 
   .header-Subheading{
     font-size: xxx-large!important;
+  }
+  .lightFontWeight{
+    font-weight: lighter;
+  }
+  .navbar-shrink{color: #4e2b22; }
+
+
+  #mainNav .navbar-shrink .nav-item .nav-link{
+    color: #087990;
   }
