@@ -104,8 +104,8 @@
   --bs-link-hover-color: #4d9fa3; */
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
-  --primary-brown: #8B4513;
-  --primary-green: #3CB371;
+  --primary-brown: #5E3327;
+  --primary-green: #4d9fa3;;
 }
 
 *,
@@ -10957,7 +10957,7 @@ p {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
+    background-color: #FBE9E56E;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -10973,8 +10973,6 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     /* background-color: #ED9BBD; SWAPPED WITH LIGHT PINK*/ 
-    color: #4e2b22!important;
-
     background-color: #FBE9E5;
     
   }
@@ -11685,5 +11683,4 @@ section#contact form#contactForm :-ms-input-placeholder {
   .lightFontWeight{
     font-weight: lighter;
   }
-  .navbar-shrink{color: #4e2b22; }
-
+  /* .navbar-shrink{color: #4e2b22; } */
