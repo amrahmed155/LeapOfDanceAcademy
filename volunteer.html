@@ -208,7 +208,7 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- <script src="js/sb-forms-0.4.1.js"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetalert2@11.js"></script>
     <script>
       $(document).ready(function() {
         
@@ -231,14 +231,25 @@
                       $('#responseMessage').html('<div class="alert alert-success">Your request has been sent successfully.</div>');
                       $('#volunteerForm')[0].reset();
                       let msg=(response.status=='success')?'Thank you for volunteering.':'A problem has occurred.'
-                      alert()
+                      Swal.fire({
+                        title: 'Hello Volunteer',
+                        text: msg,
+                        icon: response.status,
+                        confirmButtonColor:'#4d9fa3'
+                      })
+                      // "#3085d6"
                       // setTimeout(function() {
                       //     window.location.href = 'index.html';
                       // }, 3000);
                   },
                   error: function(err) {
                       alert(err)
-
+                      Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                      });
+// f27474
                       $('#responseMessage').html('<div class="alert alert-danger">There was an error submitting your request. Please try again.</div>');
                   }
               });

@@ -308,6 +308,7 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- <script src="js/sb-forms-0.4.1.js"></script> -->
+    <script src="js/sweetalert2@11.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -317,6 +318,13 @@
             url: "php/sponsorshipInsert.php",
             type: "post",
             data: {
+              name:$('#name').val(),
+              placeofbirth:$('#placeofbirth').val(),
+              Nationality:$('#Nationality').val(),
+              City:$('#City').val(),
+              gender:$("input[name='Gender']:checked").val(); ,
+
+
               interestReason: $("#interestReason").val(),
               stayingDuration: $("#stayingDuration").val(),
               skills: $("#skills").val(),
