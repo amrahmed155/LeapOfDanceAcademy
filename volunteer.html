@@ -208,7 +208,7 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- <script src="js/sb-forms-0.4.1.js"></script> -->
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
       $(document).ready(function() {
         
@@ -230,7 +230,8 @@
                   success: function(response) {
                       $('#responseMessage').html('<div class="alert alert-success">Your request has been sent successfully.</div>');
                       $('#volunteerForm')[0].reset();
-                      alert(response)
+                      let msg=(response.status=='success')?'Thank you for volunteering.':'A problem has occurred.'
+                      alert()
                       // setTimeout(function() {
                       //     window.location.href = 'index.html';
                       // }, 3000);
