@@ -8,7 +8,6 @@ $address = $_POST['streetAddress'];
 $parentName = $_POST['parentName'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$status = $_POST['status'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,8 +16,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO `register` (`id`, `name`, `gender`, `address`, `parentName`, `email`, `phone`, `status`, `DOB`) 
-VALUES (NULL, '$name', '$gender', '$address', '$parentName', '$email', '$phone',$status,'$DOB')"; 
+$sql = "INSERT INTO `register` (`id`, `name`, `gender`, `address`, `parentName`, `email`, `phone`,  `DOB`) 
+VALUES (NULL, '$name', '$gender', '$address', '$parentName', '$email', '$phone','$DOB')"; 
 // VALUES ('$interestReason', '$stayingDuration', '$skills', $GoFundMeRadio, '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
 
 if ($conn->query($sql) === TRUE) {

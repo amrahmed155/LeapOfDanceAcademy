@@ -9,7 +9,6 @@ $gender = $_POST['gender'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $sponsorTerms = $_POST['sponsorTerms'];
-$status = $_POST['status'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

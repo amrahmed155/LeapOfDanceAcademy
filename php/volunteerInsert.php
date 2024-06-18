@@ -10,7 +10,6 @@ $GoFundMeOtherReason = $_POST['GoFundMeOtherReason'];
 $ideas = $_POST['ideas'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$status = $_POST['status'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,8 +18,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO volunteer (interestReason, stayingDuration, skills, GoFundMeRadio, GoFundMeOtherReason, ideas, email, phone, status)
-VALUES ('$interestReason', '$stayingDuration', '$skills', '$GoFundMeRadio', '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
+$sql = "INSERT INTO volunteer (interestReason, stayingDuration, skills, GoFundMeRadio, GoFundMeOtherReason, ideas, email, phone)
+VALUES ('$interestReason', '$stayingDuration', '$skills', '$GoFundMeRadio', '$GoFundMeOtherReason', '$ideas', '$email', '$phone')";
 
 if ($conn->query($sql) === TRUE) {
     print json_encode(['status' => 'success', 'message' => 'New record created successfully']);
