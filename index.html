@@ -364,10 +364,10 @@
         </div>
         <div class="row align-items-center justify-content-center">
           <div class="col-md-4 mb-2 mt-2 col-lg-4 col-sm-6 centerMargin">
-          <a href="register.html" class="btn btn-primary donation-btn mt-auto "
-            >Register now</a
-          >
-        </div>
+            <a href="register.html" class="btn btn-primary donation-btn mt-auto"
+              >Register now</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -1045,6 +1045,8 @@
     <script src="js/intlTelInput.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
@@ -1075,13 +1077,53 @@
           var name = document.getElementById("name").value;
           var email = document.getElementById("email").value;
           var phone =
+            "+" +
             phoneInput.getSelectedCountryData().dialCode +
-            document.getElementById("phone").value;
+            " " +
+            $("#phone").val();
           var message = document.getElementById("message").value;
 
-          var mailtoLink = `mailto:leapofdanceacademy@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+          $.ajax({
+            url: "php/contactInsert.php",
+            type: "post",
+            data: {
+              prefix: prefix,
+              name: name,
+              message: message,
+              email: email,
+              phone: phone,
+              status: 0,
+            },
+            success: function (response) {
+              $("#responseMessage").html(
+                '<div class="alert alert-success">Your request has been sent successfully.</div>'
+              );
+              let msg =
+                JSON.parse(response).status == "success"
+                  ? "Your request has been sent successfully."
+                  : "A problem has occurred.";
+              Swal.fire({
+                title: `Hello ${prefix} ${name}`,
+                text: msg,
+                icon: response.status,
+                confirmButtonColor: "#4d9fa3",
+              });
+              $("#volunteerForm")[0].reset();
 
-          window.location.href = mailtoLink;
+            },
+            error: function (err) {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+              });
+              $("#responseMessage").html(
+                '<div class="alert alert-danger">There was an error submitting your request. Please try again.</div>'
+              );
+            },
+          });
+          // var mailtoLink = `mailto:leapofdanceacademy@gmail.com?subject=Contact Form Submission&body=Prefix: ${prefix}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+          // window.location.href = mailtoLink;
 
           // Display success message
           document

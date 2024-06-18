@@ -224,7 +224,7 @@
                     "GoFundMeOtherReason":$("#GoFundMeOtherReason").val(),
                     "ideas":$("#ideas").val(),
                     "email":$("#email").val(),
-                    "phone":"+"+phoneInput.getSelectedCountryData().dialCode+$("#phone").val(),
+                    "phone":"+"+phoneInput.getSelectedCountryData().dialCode+" "+$("#phone").val(),
                     "status":0,
                   },
                   success: function(response) {
