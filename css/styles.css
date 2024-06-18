@@ -11697,3 +11697,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     font-weight: lighter;
   }
   /* .navbar-shrink{color: #4e2b22; } */
+  .simplefont{font-weight: lighter;}
+  li{margin-bottom: 1rem;}
+  .noBulletPoint{list-style-type: none;}
+  .centerMargin{margin-right: auto;margin-left: auto;text-align: center;}

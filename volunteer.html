@@ -230,7 +230,7 @@
                   success: function(response) {
                       $('#responseMessage').html('<div class="alert alert-success">Your request has been sent successfully.</div>');
                       $('#volunteerForm')[0].reset();
-                      let msg=(response.status=='success')?'Thank you for volunteering.':'A problem has occurred.'
+                      let msg=(JSON.parse(response).status=='success')?'Thank you for volunteering.':'A problem has occurred.'
                       Swal.fire({
                         title: 'Hello Volunteer',
                         text: msg,
@@ -243,7 +243,7 @@
                       // }, 3000);
                   },
                   error: function(err) {
-                      alert(err)
+                      // alert(err)
                       Swal.fire({
                         icon: "error",
                         title: "Oops...",

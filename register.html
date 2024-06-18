@@ -96,7 +96,58 @@
     <!-- registration-->
     <section class="page-section" id="registration">
       <div class="container mt-5">
-        <h2 class="mb-4">Register Information</h2>
+        <h2 class="mb-4">SCHEDULE & CLASSES</h2>
+        <div class="form-group">
+          <ul class="noBulletPoint">
+            <li>
+              <span class="simplefont">
+                Students will train at the academy on a semi daily basis most
+                weeks and the schedule is determined by the director each week.
+                Students will often be called to the academy for special events
+                and guest classes/ workshops in addition to their normal
+                classes. Students will have various performance opportunities
+                and special events to attend on occasion.
+              </span>
+            </li>
+            <li>
+              <h3>Ballet Classes:</h3>
+              <span class="simplefont">
+                Here at Leap of Dance academy we train our students with
+                vocational ballet training with a focus on technique and quality
+                above quality education. Students will expect to attend ballet
+                classes which consist of barre work, technique, flexibility,
+                strength, across the floor combinations, variations, and
+                choreography. In addition to this students will receive training
+                in their reading and comprehension skills to learn the proper
+                terminology of how to read and write their ballet skills.
+              </span>
+            </li>
+
+            <li>
+              <h3>Acro classes:</h3>
+              <span class="simplefont"
+                >At the Dance Academy we train our students with acrobatic arts
+                to give them a better structure of strength, flexibility and
+                body awareness to enhance their skills. This program is
+                introduced on a semi regular basis and will be a part of the
+                students regular training curriculum. We provide quality over
+                quantity education as well as a safety first approach when it
+                comes to learning new skills for acro to make sure our dancers
+                stay safe.
+              </span>
+            </li>
+            <li>
+              <span class="simplefont"
+                >**Exams will be given of both styles at the end of every term
+                year and mid year to see how the student is progressing in their
+                level and if they need to stay or move up a level.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <hr />
+
+        <h2 class="mb-4">STUDENT INFORMATION</h2>
         <form id="registrationform">
           <div class="form-group">
             <label for="name">* Full Name:</label>
@@ -109,35 +160,16 @@
             />
           </div>
           <div class="form-group">
-            <label for="placeofbirth">* Place of Birth:</label>
+            <label for="DOB">* Date of Birth:</label>
             <input
-              type="text"
+              type="date"
               class="form-control"
-              id="placeofbirth"
-              name="placeofbirth"
+              id="DOB"
+              name="DOB"
               required
             />
           </div>
-          <div class="form-group">
-            <label for="Nationality">* Nationality</label>
-            <input
-              type="text"
-              class="form-control"
-              id="Nationality"
-              name="Nationality"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="city">* City/Country:</label>
-            <input
-              type="text"
-              class="form-control"
-              id="city"
-              name="city"
-              required
-            />
-          </div>
+
           <div class="form-group">
             <label> * Gender</label>
             <div class="container">
@@ -171,6 +203,27 @@
               </div>
             </div>
           </div>
+          <div class="form-group">
+            <label for="streetAddress">* Street Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="streetAddress"
+              name="streetAddress"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="ParentName">* Parent/Guardian Name :</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ParentName"
+              name="ParentName"
+              required
+            />
+          </div>
 
           <div class="form-group">
             <label for="email"> What is an email we can contact you on?</label>
@@ -193,53 +246,6 @@
               name="phone"
               required
             />
-          </div>
-          <hr />
-          <h2 class="mb-4">Length of Sponsorship</h2>
-
-          <div class="form-group">
-            <label> * Term of sponsorship</label>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="sponsorshipTerm"
-                      id="short"
-                      value="1"
-                      required
-                    />
-                    <label class="form-check-label" for="short"> Short term sponsorship</label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      name="sponsorshipTerm"
-                      id="long"
-                      value="2"
-                      required
-                    />
-                    <label class="form-check-label" for="long">Long term sponsorship</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <hr />
-          <h2 class="mb-4">Terms & Conditions</h2>
-          <div class="form-group">
-            <ul>
-              <Li>Donation received we will provide receipt with pictures</Li>
-              <Li>Keep in touch with your sponsored child</Li>
-              <Li>Communicate early in case of anything</Li>
-            </ul>
           </div>
 
           <!-- <div class="form-group">
@@ -283,7 +289,9 @@
             ></a>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a class="link-dark text-decoration-none me-3 black" href="index.html#!"
+            <a
+              class="link-dark text-decoration-none me-3 black"
+              href="index.html#!"
               >Privacy Policy</a
             >
             <a class="link-dark text-decoration-none black" href="index.html#!"
@@ -308,21 +316,21 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <!-- <script src="js/sb-forms-0.4.1.js"></script> -->
+    <script src="js/sweetalert2@11.js"></script>
 
     <script>
       $(document).ready(function () {
-        $("#sponsorshipform").on("submit", function (event) {
+        $("#registrationform").on("submit", function (event) {
           event.preventDefault();
           $.ajax({
-            url: "php/sponsorshipInsert.php",
+            url: "php/registrationInsert.php",
             type: "post",
             data: {
-              interestReason: $("#interestReason").val(),
-              stayingDuration: $("#stayingDuration").val(),
-              skills: $("#skills").val(),
-              GoFundMeRadio: $("input[name='GoFundMeRadio']:checked").val(),
-              GoFundMeOtherReason: $("#GoFundMeOtherReason").val(),
-              ideas: $("#ideas").val(),
+              Name: $("#name").val(),
+              DOB: $("#DOB").val(),
+              gender: $("input[name='Gender']:checked").val(),
+              streetAddress: $("#streetAddress").val(),
+              parentName: $("#ParentName").val(),
               email: $("#email").val(),
               phone:
                 "+" +
@@ -334,15 +342,31 @@
               $("#responseMessage").html(
                 '<div class="alert alert-success">Your request has been sent successfully.</div>'
               );
-              $("#volunteerForm")[0].reset();
-              alert(response);
+              // alert(response);
+
+              let msg =
+              JSON.parse(response).status == "success"
+                  ? "Thank you for Registering."
+                  : "A problem has occurred.";
+              Swal.fire({
+                title: "Hello "+ $("#name").val(),
+                text: msg,
+                icon: response.status,
+                confirmButtonColor: "#4d9fa3",
+              });
+              // $("#registrationform")[0].reset();
+
               // setTimeout(function() {
               //     window.location.href = 'index.html';
               // }, 3000);
             },
             error: function (err) {
-              alert(err);
-
+              // alert(err);
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+              });
               $("#responseMessage").html(
                 '<div class="alert alert-danger">There was an error submitting your request. Please try again.</div>'
               );
