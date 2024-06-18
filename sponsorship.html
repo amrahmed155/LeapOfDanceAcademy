@@ -149,7 +149,7 @@
                       type="radio"
                       name="Gender"
                       id="Male"
-                      value="1"
+                      value="Male"
                       required
                     />
                     <label class="form-check-label" for="Male">Male</label>
@@ -162,7 +162,7 @@
                       type="radio"
                       name="Gender"
                       id="Female"
-                      value="0"
+                      value="Female"
                       required
                     />
                     <label class="form-check-label" for="Female">Female</label>
@@ -208,10 +208,12 @@
                       type="checkbox"
                       name="sponsorshipTerm"
                       id="short"
-                      value="1"
-                      required
+                      value="Short term"
+                      
                     />
-                    <label class="form-check-label" for="short"> Short term sponsorship</label>
+                    <label class="form-check-label" for="short">
+                      Short term sponsorship</label
+                    >
                   </div>
                 </div>
                 <div class="col">
@@ -221,24 +223,25 @@
                       type="checkbox"
                       name="sponsorshipTerm"
                       id="long"
-                      value="2"
-                      required
+                      value="Long term"
+                      
                     />
-                    <label class="form-check-label" for="long">Long term sponsorship</label>
+                    <label class="form-check-label" for="long"
+                      >Long term sponsorship</label
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-
           <hr />
           <h2 class="mb-4">Terms & Conditions</h2>
           <div class="form-group">
             <ul>
-              <Li>Donation received we will provide receipt with pictures</Li>
-              <Li>Keep in touch with your sponsored child</Li>
-              <Li>Communicate early in case of anything</Li>
+              <li>Donation received we will provide receipt with pictures</li>
+              <li>Keep in touch with your sponsored child</li>
+              <li>Communicate early in case of anything</li>
             </ul>
           </div>
 
@@ -283,7 +286,9 @@
             ></a>
           </div>
           <div class="col-lg-4 text-lg-end">
-            <a class="link-dark text-decoration-none me-3 black" href="index.html#!"
+            <a
+              class="link-dark text-decoration-none me-3 black"
+              href="index.html#!"
               >Privacy Policy</a
             >
             <a class="link-dark text-decoration-none black" href="index.html#!"
@@ -314,43 +319,53 @@
       $(document).ready(function () {
         $("#sponsorshipform").on("submit", function (event) {
           event.preventDefault();
+          const checkboxes = document.querySelectorAll(
+            'input[name="sponsorshipTerm"]:checked'
+          );
+          const selectedValues = [];
+          checkboxes.forEach((checkbox) => {
+            selectedValues.push(checkbox.value);
+          });
+
           $.ajax({
             url: "php/sponsorshipInsert.php",
             type: "post",
             data: {
-              name:$('#name').val(),
-              placeofbirth:$('#placeofbirth').val(),
-              Nationality:$('#Nationality').val(),
-              City:$('#City').val(),
-              gender:$("input[name='Gender']:checked").val(),
-
-
-              interestReason: $("#interestReason").val(),
-              stayingDuration: $("#stayingDuration").val(),
-              skills: $("#skills").val(),
-              GoFundMeRadio: $("input[name='GoFundMeRadio']:checked").val(),
-              GoFundMeOtherReason: $("#GoFundMeOtherReason").val(),
-              ideas: $("#ideas").val(),
+              name: $("#name").val(),
+              placeofbirth: $("#placeofbirth").val(),
+              Nationality: $("#Nationality").val(),
+              city: $("#city").val(),
+              gender: $("input[name='Gender']:checked").val(),
+              sponsorTerms:selectedValues.toString() ,
               email: $("#email").val(),
               phone:
                 "+" +
                 phoneInput.getSelectedCountryData().dialCode +
                 $("#phone").val(),
-              status: 0,
+              status: 0,             
             },
             success: function (response) {
               $("#responseMessage").html(
                 '<div class="alert alert-success">Your request has been sent successfully.</div>'
               );
-              $("#volunteerForm")[0].reset();
-              alert(response);
+              let msg=(JSON.parse(response).status=='success')?'Thank you for your Sponsorship.':'A problem has occurred.'
+                      Swal.fire({
+                        title: 'Hello '+$("#name").val(),
+                        text: msg,
+                        icon: response.status,
+                        confirmButtonColor:'#4d9fa3'
+                      })   
+              $("#sponsorshipform")[0].reset();
               // setTimeout(function() {
               //     window.location.href = 'index.html';
               // }, 3000);
             },
             error: function (err) {
-              alert(err);
-
+              Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                      });
               $("#responseMessage").html(
                 '<div class="alert alert-danger">There was an error submitting your request. Please try again.</div>'
               );

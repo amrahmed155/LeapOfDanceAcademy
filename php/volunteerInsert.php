@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO volunteer (interestReason, stayingDuration, skills, GoFundMeRadio, GoFundMeOtherReason, ideas, email, phone, status)
-VALUES ('$interestReason', '$stayingDuration', '$skills', $GoFundMeRadio, '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
+VALUES ('$interestReason', '$stayingDuration', '$skills', '$GoFundMeRadio', '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
 
 if ($conn->query($sql) === TRUE) {
     print json_encode(['status' => 'success', 'message' => 'New record created successfully']);

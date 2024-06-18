@@ -6,14 +6,14 @@ $dbname = "leapofdanceacademy"; // change to your database name
 
 
 // Set parameters and execute
-$interestReason = $_POST['interestReason'];
-$stayingDuration = $_POST['stayingDuration'];
-$skills = $_POST['skills'];
-$GoFundMeRadio = $_POST['GoFundMeRadio'];
-$GoFundMeOtherReason = $_POST['GoFundMeOtherReason'];
-$ideas = $_POST['ideas'];
+$name = $_POST['name'];
+$placeofbirth = $_POST['placeofbirth'];
+$Nationality = $_POST['Nationality'];
+$city = $_POST['city'];
+$gender = $_POST['gender'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$sponsorTerms = $_POST['sponsorTerms'];
 $status = $_POST['status'];
 
 // Create connection
@@ -23,8 +23,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO volunteer (interestReason, stayingDuration, skills, GoFundMeRadio, GoFundMeOtherReason, ideas, email, phone, status)
-VALUES ('$interestReason', '$stayingDuration', '$skills', $GoFundMeRadio, '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
+$sql = "INSERT INTO `sponsor` (`id`, `name`, `placeOfBirth`, `Nationality`, `City`, `Gender`, `email`, `phone`, `sponsorTerms`) 
+VALUES (NULL, '$name', '$placeofbirth', '$Nationality', '$city', '$gender', '$email', '$phone', '$sponsorTerms') ";
+// VALUES ('$interestReason', '$stayingDuration', '$skills', $GoFundMeRadio, '$GoFundMeOtherReason', '$ideas', '$email', '$phone', $status)";
 
 if ($conn->query($sql) === TRUE) {
     print json_encode(['status' => 'success', 'message' => 'New record created successfully']);
