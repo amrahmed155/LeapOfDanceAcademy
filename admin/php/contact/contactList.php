@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 
 
 // Fetching the total number of records
-$totalData = $conn->query("SELECT COUNT(*) as count FROM contact")->fetch_assoc()['count'];
+$totalData = $conn->query("SELECT COUNT(*) as count FROM contact WHERE prefix LIKE '%$search%' OR status LIKE '$search%' OR name LIKE '%$search%' OR email LIKE '%$search%' OR phone LIKE '%$search%' OR message LIKE '%$search%'")->fetch_assoc()['count'];
 $totalFiltered = $totalData;
 
 $data = array();

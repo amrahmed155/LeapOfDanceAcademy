@@ -14,12 +14,12 @@ $offset = intval($_GET['start']);
 $search = $_GET['search']['value'];
 
 // SQL query to fetch data
-$sql = "SELECT * FROM contact WHERE prefix LIKE '%$search%' OR status LIKE '$search%' OR name LIKE '%$search%' OR email LIKE '%$search%' OR phone LIKE '%$search%' OR message LIKE '%$search%' LIMIT $limit OFFSET $offset";
+$sql = "SELECT * FROM register WHERE name LIKE '%$search%' OR status LIKE '$search%' OR gender LIKE '%$search%' OR address LIKE '%$search%' OR parentName LIKE '%$search%' OR email LIKE '%$search%' OR DOB LIKE '%$search%' OR phone LIKE '%$search%' LIMIT $limit OFFSET $offset";
 $result = $conn->query($sql);
 
 
 // Fetching the total number of records
-$totalData = $conn->query("SELECT COUNT(*) as count FROM contact")->fetch_assoc()['count'];
+$totalData = $conn->query("SELECT COUNT(*) as count FROM register WHERE name LIKE '%$search%' OR status LIKE '$search%' OR gender LIKE '%$search%' OR address LIKE '%$search%' OR parentName LIKE '%$search%' OR email LIKE '%$search%' OR DOB LIKE '%$search%' OR phone LIKE '%$search%' ")->fetch_assoc()['count'];
 $totalFiltered = $totalData;
 
 $data = array();
