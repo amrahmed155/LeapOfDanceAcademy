@@ -68,7 +68,7 @@
               <h1 class="welcome-text">
                 Good Morning, <span class="text-black fw-bold">Admin</span>
               </h1>
-              <h3 class="welcome-sub-text">Contact Messages:</h3>
+              <h3 class="welcome-sub-text">volunteer Requests:</h3>
             </li>
           </ul>
         </div>
@@ -115,14 +115,18 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Prefix</th>
-                  <th>Name</th>
+                  <th>Interest Reason</th>
+                  <th>Staying Duration</th>
+                  <th>Skills</th>
+                  <th>GoFundMe Radio</th>
+                  <th>GoFundMe Other Reason</th>
+                  <th>Ideas</th>
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Status</th>
-                  <th>Message</th>
+                  <th>Create Date</th>
                   <th>Action</th>
-                </tr>
+              </tr>
               </thead>
             </table>
           </div>
@@ -130,141 +134,106 @@
       </div>
     </div>
 
+
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="viewModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="viewModalLabel"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="viewModalLabel">View Record</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="viewModalLabel">View Record</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewId">ID</label>
+                                  <input type="text" class="form-control" id="viewId" readonly>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewCreateDate">Create Date</label>
+                                  <input type="text" class="form-control" id="viewCreateDate" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewInterestReason">Interest Reason</label>
+                                  <input type="text" class="form-control" id="viewInterestReason" readonly>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewStayingDuration">Staying Duration</label>
+                                  <input type="text" class="form-control" id="viewStayingDuration" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewSkills">Skills</label>
+                                  <input type="text" class="form-control" id="viewSkills" readonly>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewGoFundMeRadio">GoFundMe Radio</label>
+                                  <input type="text" class="form-control" id="viewGoFundMeRadio" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewGoFundMeOtherReason">GoFundMe Other Reason</label>
+                                  <input type="text" class="form-control" id="viewGoFundMeOtherReason" readonly>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewIdeas">Ideas</label>
+                                  <input type="text" class="form-control" id="viewIdeas" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewEmail">Email</label>
+                                  <a href="#" id="viewEmailLink"><input type="email" class="form-control" id="viewEmail" readonly></a>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewPhone">Phone</label>
+                                  <input type="text" class="form-control" id="viewPhone" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewStatus">Status</label>
+                                  <input type="text" class="form-control" id="viewStatus" readonly>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewId">ID</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewId"
-                      readonly
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewCreatedAt">Created At</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewCreatedAt"
-                      readonly
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewPrefix">Prefix</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewPrefix"
-                      readonly
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewName">Name</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewName"
-                      readonly
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewEmail">Email</label>
-                    <a href="#" id="viewEmailLink"
-                      ><input
-                        type="email"
-                        class="form-control"
-                        id="viewEmail"
-                        readonly
-                    /></a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewPhone">Phone</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewPhone"
-                      readonly
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewStatus">Status</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="viewStatus"
-                      readonly
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="viewMessage">Message</label>
-                    <textarea
-                      class="form-control"
-                      id="viewMessage"
-                      rows="3"
-                      readonly
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
+
     <!-- Custom js for this page-->
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -277,17 +246,21 @@
           processing: true,
           serverSide: true,
           ajax: {
-            url: "php/contactList.php",
+            url: "php/volunteer/volunteerList.php",
             type: "GET",
           },
           columns: [
-            { data: "id" },
-            { data: "prefix" },
-            { data: "name" },
-            { data: "email" },
-            { data: "phone" },
-            { data: "status" },
-            { data: "message" },
+              { "data": "id" },
+              { "data": "interestReason" },
+              { "data": "stayingDuration" },
+              { "data": "skills" },
+              { "data": "GoFundMeRadio" },
+              { "data": "GoFundMeOtherReason" },
+              { "data": "ideas" },
+              { "data": "email" },
+              { "data": "phone" },
+              { "data": "status" },
+              { "data": "createDate" },
             { data: "action", orderable: false, searchable: false },
           ],
         });
@@ -295,19 +268,22 @@
         $("#recordsTable").on("click", ".view-btn", function () {
           var id = $(this).data("id");
           $.ajax({
-            url: "php/contactRecord.php",
+            url: "php/volunteer/volunteerRecord.php",
             type: "GET",
             data: { id: id },
             success: function (data) {
               var record = JSON.parse(data);
               var subject = "Leap Of Dance Academy";
               var body =
-                "Hello,\n\nThank you for your message. We have received your contact request and will respond shortly.\n\nBest regards,\nLeap Of Dance Academy";
+                "Hello,\n\nThank you for your message. We have received your Volunteering request and will respond shortly.\n\nBest regards,\nLeap Of Dance Academy";
 
-              $("#viewId").val(record.id);
-              $("#viewCreatedAt").val(record.createDate);
-              $("#viewPrefix").val(record.prefix);
-              $("#viewName").val(record.name);
+                $('#viewId').val(record.id);
+                $('#viewInterestReason').val(record.interestReason);
+                $('#viewStayingDuration').val(record.stayingDuration);
+                $('#viewSkills').val(record.skills);
+                $('#viewGoFundMeRadio').val(record.GoFundMeRadio);
+                $('#viewGoFundMeOtherReason').val(record.GoFundMeOtherReason);
+                $('#viewIdeas').val(record.ideas);
               $("#viewEmail").val(record.email);
               $("#viewEmailLink").attr(
                 "href",
@@ -320,7 +296,7 @@
               );
               $("#viewPhone").val(record.phone);
               $("#viewStatus").val(record.status);
-              $("#viewMessage").val(record.message);
+              $('#viewCreateDate').val(record.createDate);
               $("#viewModal").modal("show");
               table.ajax.reload(null, false);
             },
