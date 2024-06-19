@@ -30379,4 +30379,13 @@ dl li {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
-/*# sourceMappingURL=maps/style.css.map */
+
+      img {
+        height: 95px!important;
+      }
+
+
+      .centerImg{
+        margin-left:auto;
+        margin-right:auto;
+      }

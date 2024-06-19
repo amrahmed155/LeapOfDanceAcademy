@@ -1,5 +1,5 @@
 <?php
-include "../../php/database.php";
+include "../../../php/database.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

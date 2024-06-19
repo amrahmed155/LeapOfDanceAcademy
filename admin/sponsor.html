@@ -277,7 +277,7 @@
           processing: true,
           serverSide: true,
           ajax: {
-            url: "php/contact/contactList.php",
+            url: "php/contactList.php",
             type: "GET",
           },
           columns: [
@@ -295,7 +295,7 @@
         $("#recordsTable").on("click", ".view-btn", function () {
           var id = $(this).data("id");
           $.ajax({
-            url: "php/contact/contactRecord.php",
+            url: "php/contactRecord.php",
             type: "GET",
             data: { id: id },
             success: function (data) {
