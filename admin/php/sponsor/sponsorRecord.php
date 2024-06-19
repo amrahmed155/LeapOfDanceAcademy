@@ -12,10 +12,10 @@ if ($conn->connect_error) {
 $id = intval($_GET['id']);
 
 // Update status to 'read'
-$update_sql = "UPDATE contact SET status = 'read' WHERE id = $id";
+$update_sql = "UPDATE sponsor SET status = 'read' WHERE id = $id";
 $conn->query($update_sql);
 
-$sql = "SELECT * FROM contact WHERE id = $id";
+$sql = "SELECT * FROM sponsor WHERE id = $id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -68,7 +68,7 @@
               <h1 class="welcome-text">
                 Good Morning, <span class="text-black fw-bold">Admin</span>
               </h1>
-              <h3 class="welcome-sub-text">Registration Requests:</h3>
+              <h3 class="welcome-sub-text">Sponsor Requests:</h3>
             </li>
           </ul>
         </div>
@@ -116,13 +116,14 @@
                 <tr>
                   <th>ID</th>
                   <th>Name</th>
+                  <th>Place of Birth</th>
+                  <th>Nationality</th>
+                  <th>City</th>
                   <th>Gender</th>
-                  <th>Address</th>
-                  <th>Parent Name</th>
                   <th>Email</th>
                   <th>Phone</th>
-                  <th>Status</th>
-                  <th>DOB</th>
+                  <th>Sponsor Terms</th>
+                  <th>status</th>
                   <th>Create Date</th>
                   <th>Action</th>
               </tr>
@@ -133,8 +134,9 @@
       </div>
     </div>
 
-     <!-- Modal -->
-     <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+
+    <!-- Modal -->
+    <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
           <div class="modal-content">
               <div class="modal-header">
@@ -154,8 +156,8 @@
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <label for="viewDOB">Date of Birth</label>
-                                  <input type="text" class="form-control" id="viewDOB" readonly>
+                                  <label for="viewCreateDate">Create Date</label>
+                                  <input type="text" class="form-control" id="viewCreateDate" readonly>
                               </div>
                           </div>
                       </div>
@@ -168,53 +170,61 @@
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
+                                  <label for="viewPlaceOfBirth">Place of Birth</label>
+                                  <input type="text" class="form-control" id="viewPlaceOfBirth" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewNationality">Nationality</label>
+                                  <input type="text" class="form-control" id="viewNationality" readonly>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="viewCity">City</label>
+                                  <input type="text" class="form-control" id="viewCity" readonly>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
                                   <label for="viewGender">Gender</label>
                                   <input type="text" class="form-control" id="viewGender" readonly>
                               </div>
                           </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewAddress">Address</label>
-                                  <input type="text" class="form-control" id="viewAddress" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewParentName">Parent Name</label>
-                                  <input type="text" class="form-control" id="viewParentName" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
                           <div class="col-md-6">
                               <div class="form-group">
                                   <label for="viewEmail">Email</label>
                                   <a href="#" id="viewEmailLink"><input type="email" class="form-control" id="viewEmail" readonly></a>
                               </div>
                           </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewPhone">Phone</label>
-                                  <input type="text" class="form-control" id="viewPhone" readonly>
-                              </div>
-                          </div>
                       </div>
                       <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewStatus">Status</label>
-                                  <input type="text" class="form-control" id="viewStatus" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewCreateDate">Create Date</label>
-                                  <input type="text" class="form-control" id="viewCreateDate" readonly>
-                              </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="viewPhone">Phone</label>
+                                <input type="text" class="form-control" id="viewPhone" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="viewSponsorTerms">Sponsor Terms</label>
+                                <input type="text" class="form-control" id="viewSponsorTerms" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="viewStatus">status</label>
+                              <input type="text" class="form-control" id="viewStatus" readonly>
                           </div>
                       </div>
+                  </div>
                   </form>
               </div>
               <div class="modal-footer">
@@ -236,42 +246,45 @@
           processing: true,
           serverSide: true,
           ajax: {
-            url: "php/register/registerList.php",
+            url: "php/sponsor/sponsorList.php",
             type: "GET",
           },
           columns: [
                     { "data": "id" },
                     { "data": "name" },
-                    { "data": "gender" },
-                    { "data": "address" },
-                    { "data": "parentName" },
+                    { "data": "placeOfBirth" },
+                    { "data": "Nationality" },
+                    { "data": "City" },
+                    { "data": "Gender" },
                     { "data": "email" },
                     { "data": "phone" },
+                    { "data": "sponsorTerms" },
                     { "data": "status" },
-                    { "data": "DOB" },
                     { "data": "createDate" },
                     { "data": "action", "orderable": false, "searchable": false }
-          ],
+                ],
         });
 
         $("#recordsTable").on("click", ".view-btn", function () {
           var id = $(this).data("id");
           $.ajax({
-            url: "php/register/registerRecord.php",
+            url: "php/sponsor/sponsorRecord.php",
             type: "GET",
             data: { id: id },
             success: function (data) {
               var record = JSON.parse(data);
               var subject = "Leap Of Dance Academy";
               var body =
-                "Hello,\n\nThank you for your message. We have received your Registration request and will respond shortly.\n\nBest regards,\nLeap Of Dance Academy";
+                "Hello,\n\nThank you for your message. We have received your contact request and will respond shortly.\n\nBest regards,\nLeap Of Dance Academy";
 
                 $('#viewId').val(record.id);
                 $('#viewName').val(record.name);
-                $('#viewGender').val(record.gender);
-                $('#viewAddress').val(record.address);
-                $('#viewParentName').val(record.parentName);
-                $('#viewEmail').val(record.email);
+                $('#viewPlaceOfBirth').val(record.placeOfBirth);
+                $('#viewNationality').val(record.Nationality);
+                $('#viewCity').val(record.City);
+                $('#viewGender').val(record.Gender);
+                $('#viewStatus').val(record.status);
+              $("#viewEmail").val(record.email);
               $("#viewEmailLink").attr(
                 "href",
                 "mailto:" +
@@ -282,10 +295,9 @@
                   encodeURIComponent(body)
               );
               $('#viewPhone').val(record.phone);
-              $('#viewStatus').val(record.status);
-              $('#viewDOB').val(record.DOB);
+              $('#viewSponsorTerms').val(record.sponsorTerms);
               $('#viewCreateDate').val(record.createDate);
-              $('#viewModal').modal('show');
+              $("#viewModal").modal("show");
               table.ajax.reload(null, false);
             },
           });

@@ -14,12 +14,32 @@ $offset = intval($_GET['start']);
 $search = $_GET['search']['value'];
 
 // SQL query to fetch data
-$sql = "SELECT * FROM contact WHERE prefix LIKE '%$search%' OR status LIKE '$search%' OR name LIKE '%$search%' OR email LIKE '%$search%' OR phone LIKE '%$search%' OR message LIKE '%$search%' LIMIT $limit OFFSET $offset";
+$sql = "SELECT * FROM sponsor 
+WHERE name LIKE '%$search%' OR
+ status LIKE '$search%' OR
+ placeOfBirth LIKE '%$search%' OR
+ Nationality LIKE '%$search%' OR
+ City LIKE '%$search%' OR
+ Gender LIKE '%$search%' OR
+ email LIKE '%$search%' OR
+ phone LIKE '%$search%' OR
+ sponsorTerms LIKE '%$search%' 
+ LIMIT $limit OFFSET $offset";
 $result = $conn->query($sql);
 
 
 // Fetching the total number of records
-$totalData = $conn->query("SELECT COUNT(*) as count FROM contact")->fetch_assoc()['count'];
+$totalData = $conn->query("SELECT COUNT(*) as count FROM sponsor
+WHERE name LIKE '%$search%' OR
+ status LIKE '$search%' OR
+ placeOfBirth LIKE '%$search%' OR
+ Nationality LIKE '%$search%' OR
+ City LIKE '%$search%' OR
+ Gender LIKE '%$search%' OR
+ email LIKE '%$search%' OR
+ phone LIKE '%$search%' OR
+ sponsorTerms LIKE '%$search%'
+ ")->fetch_assoc()['count'];
 $totalFiltered = $totalData;
 
 $data = array();
