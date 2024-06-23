@@ -11704,7 +11704,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   /* .text-muted{font-weight: 200;} */
 
   @media (max-width:801px)  { 
-  #mainNav .navbar-brand img{width:8.5rem; height:2.5rem}
+  #mainNav .navbar-brand img{width:8.5rem; height:3.3rem}
 }
   @media (min-width:901px)  { 
     .text-uppercase {
