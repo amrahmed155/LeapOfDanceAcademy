@@ -18,7 +18,7 @@ function updateImageSrc() {
 
 window.addEventListener('resize', updateImageSrc);
 window.addEventListener('load', updateImageSrc);
-
+window.addEventListener('DOMContentLoaded',updateImageSrc);
 
 window.addEventListener('DOMContentLoaded', event => {
 
