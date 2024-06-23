@@ -11702,3 +11702,16 @@ section#contact form#contactForm :-ms-input-placeholder {
   .noBulletPoint{list-style-type: none;}
   .centerMargin{margin-right: auto;margin-left: auto;text-align: center;}
   /* .text-muted{font-weight: 200;} */
+
+  @media (max-width:801px)  { 
+  #mainNav .navbar-brand img{width:11.25rem; height:6rem}
+}
+  @media (min-width:801px)  { 
+    .text-uppercase {
+      font-size: 1.4rem;
+    }
+    .btn{
+      --bs-btn-line-height: 2.5;
+      --bs-btn-font-size: 1.3rem; 
+    }
+  }

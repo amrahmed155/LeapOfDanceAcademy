@@ -7,6 +7,19 @@
 // Scripts
 // 
 
+function updateImageSrc() {
+    var img = document.getElementById('responsive-img');
+    if (window.innerWidth <= 767) {
+        img.src = 'assets/img/Leap of Dance Horizontal Logo.png';
+    } else {
+        img.src = 'assets/img/Logo-01.png';
+    }
+}
+
+window.addEventListener('resize', updateImageSrc);
+window.addEventListener('load', updateImageSrc);
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
