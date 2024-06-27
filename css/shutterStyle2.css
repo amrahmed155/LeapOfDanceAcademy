@@ -254,7 +254,7 @@ h1, h2, h3,
       .header-bar ul li a {
         display: block;
         padding: 4px 0;
-        color: #fff!important ;
+        color: #4e2b22!important ;
         text-transform: uppercase;
         font-size: .8rem; }
         @media (max-width: 991.98px) {
@@ -265,12 +265,15 @@ h1, h2, h3,
     .header-bar ul.social li {
       display: inline-block; }
       .header-bar ul.social li a {
-        padding: 10px; }
+        padding: 10px; 
+        color: white !important;
+      }
       .header-bar ul.social li:last-child a {
         padding-right: 0; 
         padding-left:0;
       }
 
+        
 .main-content {
   float: left;
   width: calc(100% - 250px); }
