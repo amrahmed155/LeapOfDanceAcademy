@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2024 at 11:17 AM
+-- Generation Time: Jun 27, 2024 at 07:01 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -16,6 +16,16 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+
+
+-- drop previous tables
+
+DROP Table contact;
+DROP Table register;
+DROP Table sponsor;
+DROP Table volunteer;
+DROP Table user;
 
 --
 -- Database: `leapofdanceacademy`
@@ -43,10 +53,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id`, `prefix`, `name`, `email`, `phone`, `message`, `status`, `createDate`) VALUES
-(1, 'Mr.', 'amr ahmed', 'aska@asmd.sxa', '1218938921', 'asdjka sa sjdasdk ', 'read', '2024-06-18 16:25:35'),
-(2, 'Mr.', 'amr', 'hbasbhx@ASKM.DSA', '+1 23189421u8', 'sdaijksad', 'read', '2024-06-18 16:25:35'),
-(3, 'Mr.', 'dash', 'qsand@sad.dsa', '+1 72831781', 'sajdnaskdnsadkns nfjkasn kdsna kjansd knak nkjasd njkn sadnsa kna knsfkjns dkjfnfds kanjkfdsn kjnsd ajknfd jnkj sdandfsk nkjdfs nkjfdnbg hjfak nldf ndakj', 'read', '2024-06-18 16:27:09');
-
+(1, 'Mr.', 'amr ahmed', 'aska@asmd.sxa', '1218938921', 'asdjka sa sjdasdk ', 'read', '2024-06-18 16:25:35');
 -- --------------------------------------------------------
 
 --
@@ -71,19 +78,7 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id`, `name`, `gender`, `address`, `parentName`, `email`, `phone`, `status`, `DOB`, `createDate`) VALUES
-(1, '', '0', '', 'smds', 'k@sakm.asd', '+11282391', '0', NULL, '2024-06-18 16:25:49'),
-(2, '', '0', '', 'smds', 'k@sakm.asd', '+11282391', '0', NULL, '2024-06-18 16:25:49'),
-(3, 'amra', '0', 'adsmk', 'smds', 'k@sakm.asd', '+11282391', '0', '2023-05-17', '2024-06-18 16:25:49'),
-(4, 'amra', '0', 'adsmk', 'smds', 'k@sakm.asd', '+11282391', '0', '2023-05-17', '2024-06-18 16:25:49'),
-(5, 'iasd', '0', 'adsmk', 'smds', 'hbasbhx@ASKM.DSA', '+440123812821', '0', '2024-07-19', '2024-06-18 16:25:49'),
-(6, 'sadjnsad', '0', 'dsfaj', 'smds', 'daniel.martinez@example.co', '+443828231', '0', '2023-05-17', '2024-06-18 16:25:49'),
-(7, 'jfasdn', '1', 'adsmk', 'smds', 'k@sakm.asd', '+182198231', '0', '2025-07-17', '2024-06-18 16:25:49'),
-(8, 'amra', '0', 'asdkm', 'msdakm', 'msdamk@mas.sam', '+12932102319', '0', '2017-04-16', '2024-06-18 16:25:49'),
-(9, 'amr ahmed ', '1', 'Amdasj street', 'Ahmed', 'amra15@go.eg', '+201293192112', '0', '1998-05-15', '2024-06-18 16:25:49'),
-(10, 'test2', '0', 'Amdasj street2', 'msdakm', 'aa@a.a', '+201002003432', '0', '2008-05-16', '2024-06-18 16:25:49'),
-(11, 'test', '0', 'Amdasj street', 'Ahm', 'aska@asmd.sxa', '+12193190', '0', '2023-05-17', '2024-06-18 16:25:49'),
-(12, 'teas', '1', 'Amdasj street', 'smds', 'hbasbhx@ASKM.DSA', '+128391', 'read', '2023-04-16', '2024-06-18 16:25:49'),
-(13, 'teaas', '1', 'asji', 'dsakm', 'jdsanj@sjd.sad', '+44 12832918321', 'unread', '2025-07-20', '2024-06-19 07:07:20');
+(1, '', '0', '', 'smds', 'k@sakm.asd', '+11282391', '0', NULL, '2024-06-18 16:25:49');
 
 -- --------------------------------------------------------
 
@@ -110,12 +105,29 @@ CREATE TABLE `sponsor` (
 --
 
 INSERT INTO `sponsor` (`id`, `name`, `placeOfBirth`, `Nationality`, `City`, `Gender`, `email`, `phone`, `sponsorTerms`, `createDate`, `status`) VALUES
-(1, 'amr', 'sdskma', 'aksmdak', '', '', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'read'),
-(2, 'amr', 'sdskma', 'aksmdak', '', '', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'read'),
-(3, 'amr', 'sdskma', 'aksmdak', '', 'Female', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'unread'),
-(4, 'amr', 'sdskma', 'aksmdak', '', 'Female', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'unread'),
-(5, 'amr', 'sdskma', 'aksmdak', '', 'Female', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'read'),
-(6, 'teasq231', 'teasq231213', 'teasq2312113', 'dsakm', 'Male', 'sdja@asdsda.sad', '+121412', 'Short term', '2024-06-18 16:25:58', 'read');
+(1, 'amr', 'sdskma', 'aksmdak', '', '', 'dkamsas@wsa.sa', '+12391239', 'Short term,Long term', '2024-06-18 16:25:58', 'read');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `id`) VALUES
+('Admin', 'LeaP@10A1', 1),
+('Daniel', 'LODA@00Ad1', 2),
+('User1', 'LeaP@20Ac', 3),
+('User2', 'LODA@20', 4);
 
 -- --------------------------------------------------------
 
@@ -142,14 +154,7 @@ CREATE TABLE `volunteer` (
 --
 
 INSERT INTO `volunteer` (`id`, `interestReason`, `stayingDuration`, `skills`, `GoFundMeRadio`, `GoFundMeOtherReason`, `ideas`, `email`, `phone`, `status`, `createDate`) VALUES
-(1, 'test1', 'test2', 'test3', '-1', 'afsmk', 'test5', 'daniel.martinez@example.co', '+121214241', '0', '2024-06-18 16:26:09'),
-(2, 'awa', 'wsd', 'sad', '1', 'askd', 'sadik', 'idas@sida.asd', '+20213123213', 'read', '2024-06-18 16:26:09'),
-(3, 'jdsanj', 'kmsda', 'jnadsfdjs', '1', 'test4', 'kmasd', 'smdak@amsa.asd', '+102151315', '0', '2024-06-18 16:26:09'),
-(4, 'lsa', 'sda', 'sda', '1', 'sadq', 'asd', 'idas@sida.asda', '+1541512', '0', '2024-06-18 16:26:09'),
-(5, 'text1', 'text12', 'text13', 'Yes', 'text5', 'text6', 'text7@t.t', '+112214312412', '0', '2024-06-18 16:26:09'),
-(6, 'text1', 'text1', 'text1', 'Yes', 'wasdk', 'saijd', 'jdsanj@sjd.sad', '+1233293', '0', '2024-06-18 16:26:09'),
-(7, '', '', '', '', '', '', 'aska@asmd.sxa', '12198 1298321', 'read', '2024-06-18 16:26:09'),
-(8, 'dsaj', 'sdja', 'jds', 'Yes', 'dsj', 'asdjn', 'jsda@asdj.das', '+1 38232823', 'read', '2024-06-18 16:26:09');
+(1, 'test1', 'test2', 'test3', '-1', 'afsmk', 'test5', 'daniel.martinez@example.co', '+121214241', '0', '2024-06-18 16:26:09');
 
 --
 -- Indexes for dumped tables
@@ -174,6 +179,12 @@ ALTER TABLE `sponsor`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `volunteer`
 --
 ALTER TABLE `volunteer`
@@ -187,25 +198,31 @@ ALTER TABLE `volunteer`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sponsor`
 --
 ALTER TABLE `sponsor`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `volunteer`
 --
 ALTER TABLE `volunteer`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
