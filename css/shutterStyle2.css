@@ -405,3 +405,7 @@ h1, h2, h3,
         width: 6.25rem;
         transition: height 0.3s ease-in-out;
       }
+
+      @media (max-width:801px)  { 
+         #responsive-img{width:6.6rem; height:4rem}
+      }
