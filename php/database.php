@@ -1,10 +1,13 @@
 <?php
-$servername = "localhost"; // change if necessary
-$username = "Amr"; // change if necessary
-$password = "amr@2020"; // change if necessary
-$dbname = "leapofdanceacademy"; // change to your database name
+// $servername = "localhost"; // change if necessary
+// $username = "Amr"; // change if necessary
+// $password = "amr@2020"; // change if necessary
+// $dbname = "leapofdanceacademy"; // change to your database name
 
-
+$servername = "localhost"; 
+$username = "u930724794_academyadmin"; 
+$password = "Z5nD6rL2"; 
+$dbname = "u930724794_lodang"; 
 
 
 //My sql conecttion string
