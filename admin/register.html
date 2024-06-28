@@ -92,7 +92,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Register.html">
+              <a class="nav-link" href="./register.html">
                 <i class="menu-icon mdi mdi-account-circle-outline"></i>
                 <span class="menu-title">Register</span>
               </a>
@@ -241,18 +241,18 @@ document.getElementById('exportBtn').addEventListener('click', function () {
     // Define the URL of your API endpoint
     const apiUrl = './php/register/getAllRegister.php';
 
-    // New keys mapping
     const newKeys = {
-        createDate: 'Create Date',
-        email: 'Email',
         id: 'ID',
-        message: 'Message',
         name: 'Name',
+        gender: 'Gender',
+        address: 'Address',
+        parentName: 'Parent Name',
+        email: 'Email',
         phone: 'Phone',
-        prefix: 'Prefix',
-        status: 'Status'
+        status: 'Status',
+        DOB: 'Date of Birth',
+        createDate: 'Create Date'
     };
-
     // Call the function to fetch, rename, and export data
     fetchAndExportToExcel(apiUrl, newKeys,'Registerations');
 });
