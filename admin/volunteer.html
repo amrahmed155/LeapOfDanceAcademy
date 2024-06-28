@@ -54,12 +54,10 @@
         <div
           class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"
         >
-
           <div class="centerImg">
             <a class="navbar-brand brand-logo" href="#">
               <img src="assets/images/logo.png" alt="logo" />
             </a>
-            
           </div>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-top">
@@ -69,6 +67,9 @@
                 Good Morning, <span class="text-black fw-bold">Admin</span>
               </h1>
               <h3 class="welcome-sub-text">volunteer Requests:</h3>
+              <button class="btn btn-primary btn-special2" id="exportBtn">
+                volunteer Export
+              </button>
             </li>
           </ul>
         </div>
@@ -126,7 +127,7 @@
                   <th>Status</th>
                   <th>Create Date</th>
                   <th>Action</th>
-              </tr>
+                </tr>
               </thead>
             </table>
           </div>
@@ -134,105 +135,180 @@
       </div>
     </div>
 
-
     <!-- Modal -->
-    <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="viewModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="viewModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog" role="document">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="viewModalLabel">View Record</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <form>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewId">ID</label>
-                                  <input type="text" class="form-control" id="viewId" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewCreateDate">Create Date</label>
-                                  <input type="text" class="form-control" id="viewCreateDate" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewInterestReason">Interest Reason</label>
-                                  <input type="text" class="form-control" id="viewInterestReason" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewStayingDuration">Staying Duration</label>
-                                  <input type="text" class="form-control" id="viewStayingDuration" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewSkills">Skills</label>
-                                  <input type="text" class="form-control" id="viewSkills" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewGoFundMeRadio">GoFundMe Radio</label>
-                                  <input type="text" class="form-control" id="viewGoFundMeRadio" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewGoFundMeOtherReason">GoFundMe Other Reason</label>
-                                  <input type="text" class="form-control" id="viewGoFundMeOtherReason" readonly>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewIdeas">Ideas</label>
-                                  <input type="text" class="form-control" id="viewIdeas" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewEmail">Email</label>
-                                  <a href="#" id="viewEmailLink"><input type="email" class="form-control" id="viewEmail" readonly></a>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewPhone">Phone</label>
-                                  <input type="text" class="form-control" id="viewPhone" readonly>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6">
-                              <div class="form-group">
-                                  <label for="viewStatus">Status</label>
-                                  <input type="text" class="form-control" id="viewStatus" readonly>
-                              </div>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="viewModalLabel">View Record</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewId">ID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewId"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewCreateDate">Create Date</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewCreateDate"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewInterestReason">Interest Reason</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewInterestReason"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewStayingDuration">Staying Duration</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewStayingDuration"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewSkills">Skills</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewSkills"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewGoFundMeRadio">GoFundMe Radio</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewGoFundMeRadio"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewGoFundMeOtherReason"
+                      >GoFundMe Other Reason</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewGoFundMeOtherReason"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewIdeas">Ideas</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewIdeas"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewEmail">Email</label>
+                    <a href="#" id="viewEmailLink"
+                      ><input
+                        type="email"
+                        class="form-control"
+                        id="viewEmail"
+                        readonly
+                    /></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewPhone">Phone</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewPhone"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="viewStatus">Status</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="viewStatus"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
     <!-- Custom js for this page-->
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css" />
@@ -240,7 +316,32 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="js/exceljs.min.js"></script>
+    <script src="js/exporter.js"></script>
     <script>
+      document
+        .getElementById("exportBtn")
+        .addEventListener("click", function () {
+          // Define the URL of your API endpoint
+          const apiUrl =
+            "./php/volunteer/getAllVolunteers.php";
+          // New keys mapping
+          const newKeys = {
+            id: "ID",
+            interestReason: "Interest Reason",
+            stayingDuration: "Staying Duration",
+            skills: "Skills",
+            GoFundMeRadio: "GoFundMe Radio",
+            GoFundMeOtherReason: "GoFundMe Other Reason",
+            ideas: "Ideas",
+            email: "Email",
+            phone: "Phone",
+            status: "Status",
+            createDate: "Create Date",
+          };
+          // Call the function to fetch, rename, and export data
+          fetchAndExportToExcel(apiUrl, newKeys,'Volunteers');
+        });
       $(document).ready(function () {
         var table = $("#recordsTable").DataTable({
           processing: true,
@@ -250,17 +351,21 @@
             type: "GET",
           },
           columns: [
-              { "data": "id" , "orderable": false, "searchable": false },
-              { "data": "interestReason" , "orderable": false, "searchable": false },
-              { "data": "stayingDuration" , "orderable": false, "searchable": false },
-              { "data": "skills" , "orderable": false, "searchable": false },
-              { "data": "GoFundMeRadio" , "orderable": false, "searchable": false },
-              { "data": "GoFundMeOtherReason" , "orderable": false, "searchable": false },
-              { "data": "ideas" , "orderable": false, "searchable": false },
-              { "data": "email" , "orderable": false, "searchable": false },
-              { "data": "phone" , "orderable": false, "searchable": false },
-              { "data": "status" , "orderable": false, "searchable": false },
-              { "data": "createDate" , "orderable": false, "searchable": false },
+            { data: "id", orderable: false, searchable: false },
+            { data: "interestReason", orderable: false, searchable: false },
+            { data: "stayingDuration", orderable: false, searchable: false },
+            { data: "skills", orderable: false, searchable: false },
+            { data: "GoFundMeRadio", orderable: false, searchable: false },
+            {
+              data: "GoFundMeOtherReason",
+              orderable: false,
+              searchable: false,
+            },
+            { data: "ideas", orderable: false, searchable: false },
+            { data: "email", orderable: false, searchable: false },
+            { data: "phone", orderable: false, searchable: false },
+            { data: "status", orderable: false, searchable: false },
+            { data: "createDate", orderable: false, searchable: false },
             { data: "action", orderable: false, searchable: false },
           ],
         });
@@ -277,18 +382,18 @@
               var body =
                 "Hello,\n\nThank you for your message. We have received your Volunteering request and will respond shortly.\n\nBest regards,\nLeap Of Dance Academy";
 
-                $('#viewId').val(record.id);
-                $('#viewInterestReason').val(record.interestReason);
-                $('#viewStayingDuration').val(record.stayingDuration);
-                $('#viewSkills').val(record.skills);
-                $('#viewGoFundMeRadio').val(record.GoFundMeRadio);
-                $('#viewGoFundMeOtherReason').val(record.GoFundMeOtherReason);
-                $('#viewIdeas').val(record.ideas);
+              $("#viewId").val(record.id);
+              $("#viewInterestReason").val(record.interestReason);
+              $("#viewStayingDuration").val(record.stayingDuration);
+              $("#viewSkills").val(record.skills);
+              $("#viewGoFundMeRadio").val(record.GoFundMeRadio);
+              $("#viewGoFundMeOtherReason").val(record.GoFundMeOtherReason);
+              $("#viewIdeas").val(record.ideas);
               $("#viewEmail").val(record.email);
               $("#viewEmailLink").attr(
                 "href",
                 "mailto:" +
-                record.email +
+                  record.email +
                   "?subject=" +
                   encodeURIComponent(subject) +
                   "&body=" +
@@ -296,7 +401,7 @@
               );
               $("#viewPhone").val(record.phone);
               $("#viewStatus").val(record.status);
-              $('#viewCreateDate').val(record.createDate);
+              $("#viewCreateDate").val(record.createDate);
               $("#viewModal").modal("show");
               table.ajax.reload(null, false);
             },

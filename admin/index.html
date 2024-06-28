@@ -69,6 +69,8 @@
                 Good Morning, <span class="text-black fw-bold">Admin</span>
               </h1>
               <h3 class="welcome-sub-text">Contact Messages:</h3>
+            <button class="btn btn-primary btn-special2" id="exportBtn">Contacts Export</button>
+
             </li>
           </ul>
         </div>
@@ -271,7 +273,31 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="js/exceljs.min.js"></script>
+    <script src="js/exporter.js"></script>
+
     <script>
+
+      document.getElementById('exportBtn').addEventListener('click', function () {
+    // Define the URL of your API endpoint
+    const apiUrl = './php/contact/getAllContact.php';
+
+    // New keys mapping
+    const newKeys = {
+        createDate: 'Create Date',
+        email: 'Email',
+        id: 'ID',
+        message: 'Message',
+        name: 'Name',
+        phone: 'Phone',
+        prefix: 'Prefix',
+        status: 'Status'
+    };
+
+    // Call the function to fetch, rename, and export data
+    fetchAndExportToExcel(apiUrl, newKeys,'contacts');
+});
+
       $(document).ready(function () {
         var table = $("#recordsTable").DataTable({
           processing: true,

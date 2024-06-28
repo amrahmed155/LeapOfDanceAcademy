@@ -25,7 +25,7 @@ $totalFiltered = $totalData;
 $data = array();
 
 while($row = $result->fetch_assoc()) {
-    $row['action'] = '<button class="btn btn-secondary view-btn" data-id="'.$row['id'].'">View</button>';
+    $row['action'] = '<button class="btn btn-secondary view-btn btn-special" data-id="'.$row['id'].'">View</button>';
     $data[] = $row;
 }
 

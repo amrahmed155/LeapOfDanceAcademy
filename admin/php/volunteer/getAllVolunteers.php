@@ -3,13 +3,17 @@ include "../../../php/database.php";
 header("Content-Type: application/json;charset=utf-8");
 header('Content-Type: application/json');
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM contact";
-$result = $conn->query($sql);
+$sqlSatament = "select  *  from volunteer  " ;
+//execute select ;
+$table = select("table" ,$sqlSatament) ;
+ //loop over result to build questions DB
+ $result = array( ) ;
+for ($index = 0; $index < count($table); $index++)
+	{
+   $result[$index] =  json_decode(json_encode( $table[$index]['table'] ) );
+	}
+//send results
+
 print  json_encode (  $result );
 ?>

@@ -1,44 +1,19 @@
 <?php
-function select(  $modul , $query , $type = 'all'  )
-{
-		$return = array() ;
-	   // select query 
-       $Results = mysqli_query($GLOBALS['mysql']  ,  $query );
-    
-	   // convert the sql return no array
-       while($obj = mysqli_fetch_assoc($Results )){ 
-			// to change the object from User[0]['id'] to be like User[0]['User']['id'] t
-            $return[] = array( $modul => $obj   )  ;
-       } 
+include "../../../php/database.php";
+header("Content-Type: application/json;charset=utf-8");
+header('Content-Type: application/json');
+// Create connection
 
-	   
-       switch ( $type) {
-            case 'first':
-			    // to change the object from User['id'] to be like Use['User']['id'] 
-			    $return  = $return[0] ;         
-            break;
-        }
-      // ob_flush();  
-      return  $return ; 
-}
+$sqlSatament = "select  *  from sponsor  " ;
+//execute select ;
+$table = select("table" ,$sqlSatament) ;
+ //loop over result to build questions DB
+ $result = array( ) ;
+for ($index = 0; $index < count($table); $index++)
+	{
+   $result[$index] =  json_decode(json_encode( $table[$index]['table'] ) );
+	}
+//send results
 
-// sample query like insert or update or .....
-function query(  $query  )
-{
- 
-      $Results = mysqli_query($GLOBALS['mysql']  ,  $query );
-      ob_flush();
-	  return  $Results ;
- }
- function insert($query)
-{
-   /// $Results = $GLOBALS['mysql']->prepare($query);
-   // $res = $Results->execute();
-   // return $res ? $GLOBALS['mysql']->insert_id : 0;
-	
-	
-	$Results = mysqli_query($GLOBALS['mysql']  ,  $query );
-      ob_flush();
-	  return  $Results ;
-}
+print  json_encode (  $result );
 ?>
