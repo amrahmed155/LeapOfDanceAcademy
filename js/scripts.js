@@ -12,7 +12,7 @@ function updateImageSrc() {
     if (window.innerWidth <= 767) {
         img.src = 'assets/img/Leap of Dance Horizontal Logo.png';
     } else {
-        img.src = 'assets/img/Logo-01.png';
+        img.src = 'assets/img/Leap of dance Logo Vertical.png';
     }
 }
 

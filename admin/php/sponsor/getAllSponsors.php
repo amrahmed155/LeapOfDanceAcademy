@@ -1,20 +1,4 @@
 <?php
-$servername = "localhost"; // change if necessary
-$username = "Amr"; // change if necessary
-$password = "amr@2020"; // change if necessary
-$dbname = "leapofdanceacademy"; // change to your database name
-
-
-
-
-//My sql conecttion string
-$mysql = new mysqli($servername, $username, $password, $dbname);
-
-// if database conection error 
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
 function select(  $modul , $query , $type = 'all'  )
 {
 		$return = array() ;

@@ -20,7 +20,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="admin/assets/images/favicon.ico" />
+    <link rel="shortcut icon" href="assets/Icon-01.ico" />
 </head>
 <body>
     <div class="container-scroller">

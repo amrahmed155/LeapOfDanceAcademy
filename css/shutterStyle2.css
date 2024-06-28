@@ -144,7 +144,7 @@ h1, h2, h3,
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li.active > a {
-        color: #4d9fa3 ; }
+        color: #4d9fa3 !important; }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -261,7 +261,7 @@ h1, h2, h3,
           .header-bar ul li a {
             padding: 4px 10px; } }
       .header-bar ul li.active a {
-        color: #4d9fa3 ; }
+        color: #4d9fa3 !important; }
     .header-bar ul.social li {
       display: inline-block; }
       .header-bar ul.social li a {
